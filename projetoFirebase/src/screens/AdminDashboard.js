@@ -1,6 +1,7 @@
 import React from "react";
-import { View, Button, StyleSheet, Text, ScrollView } from "react-native";
+import { View, Text, ScrollView, StyleSheet } from "react-native";
 import { useNavigation } from "@react-navigation/native";
+import Button from '../components/Button'; // seu botão estilizado
 
 const AdminDashboard = () => {
   const navigation = useNavigation();
@@ -12,7 +13,6 @@ const AdminDashboard = () => {
       <Text style={styles.section}>Usuários</Text>  
       <Button title="Cadastrar Novo Usuário" onPress={() => navigation.navigate('CadastroUsuarioScreen')} />
       <Button title="Ver/Editar Usuários" onPress={() => navigation.navigate("UserList")} />
-  
 
       <Text style={styles.section}>Cursos</Text>
       <Button title="Cadastrar Curso" onPress={() => navigation.navigate("CursoScreen")} />
@@ -37,16 +37,24 @@ const styles = StyleSheet.create({
   container: {
     padding: 20,
     paddingBottom: 60,
+    backgroundColor: '#f5f7fa',
   },
   title: {
-    fontSize: 26,
+    fontSize: 28,
     fontWeight: "bold",
     marginBottom: 30,
+    color: '#34495e',
+    textAlign: 'center',
   },
   section: {
-    marginTop: 20,
-    fontSize: 20,
-    fontWeight: "600",
+    marginTop: 30,
+    marginBottom: 10,
+    fontSize: 22,
+    fontWeight: "700",
+    color: '#2c3e50',
+    borderBottomWidth: 1,
+    borderBottomColor: '#dfe6e9',
+    paddingBottom: 5,
   },
 });
 

@@ -3,25 +3,37 @@ import { StyleSheet } from 'react-native';
 const globalStyles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 16,
-    backgroundColor: '#fff',
+    backgroundColor: '#E3F2FD', // cor análoga suave ao azul do botão
+    justifyContent: 'center',   // centraliza verticalmente
+    alignItems: 'center',       // centraliza horizontalmente
+    padding: 20,
   },
   title: {
-    fontSize: 20,
+    fontSize: 24,
     fontWeight: 'bold',
-    marginBottom: 16,
+    marginBottom: 40,
+    color: '#2C3E50', // cor escura para contraste
+    textAlign: 'center',
   },
-  button: {
-    backgroundColor: '#143D59',
-    padding: 12,
-    borderRadius: 8,
+    button: {
+    backgroundColor: '#4A90E2', // azul vibrante
+    paddingVertical: 14,
+    paddingHorizontal: 24,
+    borderRadius: 12,
     alignItems: 'center',
-    marginVertical: 8,
+    justifyContent: 'center',
+    marginVertical: 10,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 3 },
+    shadowOpacity: 0.2,
+    shadowRadius: 4,
+    elevation: 5, // para Android
   },
   buttonText: {
     color: '#fff',
     fontSize: 16,
     fontWeight: 'bold',
+    letterSpacing: 1,
   },
 });
 
